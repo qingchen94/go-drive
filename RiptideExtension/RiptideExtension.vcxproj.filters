@@ -1,0 +1,171 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav</Extensions>
+    </Filter>
+    <Filter Include="Generated Files">
+      <UniqueIdentifier>{16b5a425-1b34-473f-9da9-e35d27074465}</UniqueIdentifier>
+      <SourceControlFiles>False</SourceControlFiles>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="dllmain.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="RiptideContextMenuImpl.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="RiptideExtension.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="RiptideHandler2.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="RiptideHandler4.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TransparentBitmap.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="RiptideExtension_i.c">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Helper.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="RiptideExtension.def">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="RiptideContextMenuImpl.rgs">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="RiptideHandler2.rgs">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="RiptideHandler4.rgs">
+      <Filter>Resource Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Midl Include="RiptideExtension.idl">
+      <Filter>Source Files</Filter>
+    </Midl>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="dllmain.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="RiptideContextMenuImpl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="RiptideHandler2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="RiptideHandler4.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TransparentBitmap.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="RiptideExtension_i.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Helper.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\RiptideExtensionRes\Resource\check.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\RiptideExtensionRes\Resource\link.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\RiptideExtensionRes\Resource\link.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\RiptideExtensionRes\Resource\Linksite_Folder.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\RiptideExtensionRes\Resource\Linksite_Shared_Folder.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\RiptideExtensionRes\Resource\modified.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\RiptideExtensionRes\Resource\multiple_revisions.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\RiptideExtensionRes\Resource\nosync.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\RiptideExtensionRes\Resource\riptide.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\RiptideExtensionRes\Resource\riptide.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\RiptideExtensionRes\Resource\rootfolder_share.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\RiptideExtensionRes\Resource\securelink.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\RiptideExtensionRes\Resource\securelink.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\RiptideExtensionRes\Resource\selsync.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resource\check.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resource\delete.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resource\rootfolder_share.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resource\link.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resource\download.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resource\preview.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="RiptideExtension.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+</Project>

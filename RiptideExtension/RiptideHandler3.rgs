@@ -1,0 +1,39 @@
+HKCR
+{
+	NoRemove CLSID
+	{
+		ForceRemove {5BEFEF78-E157-4C23-95FC-922911C27CD6} = s 'RiptideHandler3 Class'
+		{
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			'TypeLib' = s '{07FD1362-1688-4525-96C7-13D3D8DB10FE}'
+		}
+	}
+}
+
+HKLM
+{
+	NoRemove SOFTWARE
+	{
+		NoRemove Microsoft
+		{
+			NoRemove Windows
+			{
+				NoRemove CurrentVersion
+				{
+					NoRemove Explorer
+					{
+						NoRemove ShellIconOverlayIdentifiers
+						{
+							ForceRemove ' FlowCMSync4' = s '{5BEFEF78-E157-4C23-95FC-922911C27CD6}'
+							{
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

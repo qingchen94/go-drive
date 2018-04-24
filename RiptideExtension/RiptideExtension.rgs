@@ -1,0 +1,11 @@
+HKCR
+{
+	NoRemove AppID
+	{
+		'%APPID%' = s 'RiptideExtension'
+		'RiptideExtension.DLL'
+		{
+			val AppID = s '%APPID%'
+		}
+	}
+}

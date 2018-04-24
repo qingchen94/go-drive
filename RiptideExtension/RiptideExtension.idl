@@ -1,0 +1,98 @@
+// RiptideExtension.idl : IDL source for RiptideExtension
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (RiptideExtension.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+
+[
+	object,
+	uuid(518BAA36-47E9-4CF3-977F-0C6D39AF24AB),
+	helpstring("IRiptideHandler4 Interface"),
+	pointer_default(unique)
+]
+interface IRiptideHandler4 : IUnknown{
+};
+/*[
+	object,
+	uuid(78A819D2-8BC6-4FC9-A042-F4CFDBA69240),
+	helpstring("IRiptideHandler3 Interface"),
+	pointer_default(unique)
+]
+interface IRiptideHandler3 : IUnknown{
+};*/
+[
+	object,
+	uuid(1A2B5C18-D60E-476B-9643-FE108D344AC3),
+	helpstring("IRiptideHandler2 Interface"),
+	pointer_default(unique)
+]
+interface IRiptideHandler2 : IUnknown{
+};
+/*[
+	object,
+	uuid(C76A87FD-0FF2-47F8-92E5-F576202358A8),
+	helpstring("IRiptideHandler1 Interface"),
+	pointer_default(unique)
+]
+interface IRiptideHandler1 : IUnknown{
+};*/
+[
+	object,
+	uuid(EE9EB51B-E08A-4D41-B589-3D04EFA331CB),
+	helpstring("IRiptideContextMenuImpl Interface"),
+	pointer_default(unique)
+]
+interface IRiptideContextMenuImpl : IUnknown{
+};
+[
+	uuid(07FD1362-1688-4525-96C7-13D3D8DB10FE),
+	version(1.0),
+	helpstring("RiptideExtension 1.0 Type Library")
+]
+library RiptideExtensionLib
+{
+	importlib("stdole2.tlb");
+	[
+		uuid(7DD4F91B-3653-4AAE-8EC2-22867A158404),
+		helpstring("RiptideHandler4 Class")
+	]
+	coclass RiptideHandler4
+	{
+		[default] interface IRiptideHandler4;
+	};
+	/*[
+		uuid(5BEFEF78-E157-4C23-95FC-922911C27CD6),
+		helpstring("RiptideHandler3 Class")
+	]
+	coclass RiptideHandler3
+	{
+		[default] interface IRiptideHandler3;
+	};*/
+	[
+		uuid(21D134B6-DC2E-4274-9D0D-7921C3546A62),
+		helpstring("RiptideHandler2 Class")
+	]
+	coclass RiptideHandler2
+	{
+		[default] interface IRiptideHandler2;
+	};
+	/*[
+		uuid(EA54B751-D194-442A-9B7D-2F6DA676428F),
+		helpstring("RiptideHandler1 Class")
+	]
+	coclass RiptideHandler1
+	{
+		[default] interface IRiptideHandler1;
+	};*/
+	[
+		uuid(0F4BB248-3603-46A1-AAA1-D0CCC9A5E2BE),
+		helpstring("RiptideContextMenuImpl Class")
+	]
+	coclass RiptideContextMenuImpl
+	{
+		[default] interface IRiptideContextMenuImpl;
+	};
+};

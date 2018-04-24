@@ -1,0 +1,43 @@
+HKCR
+{
+	NoRemove CLSID
+	{
+		ForceRemove {0F4BB248-3603-46A1-AAA1-D0CCC9A5E2BE} = s 'HP FlowCMSyncMenu'
+		{
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+		}
+	}
+	NoRemove *
+	{
+		NoRemove shellex
+		{
+			NoRemove ContextMenuHandlers
+			{
+				ForceRemove 'HP FlowCMSyncMenu' = s '{0F4BB248-3603-46A1-AAA1-D0CCC9A5E2BE}'
+			}
+		}
+	}
+	NoRemove Directory
+	{
+		NoRemove Background
+		{
+			NoRemove shellex
+			{
+				NoRemove ContextMenuHandlers
+				{
+					ForceRemove 'HP FlowCMSyncMenu' = s '{0F4BB248-3603-46A1-AAA1-D0CCC9A5E2BE}'
+				}
+			}
+		}
+		NoRemove shellex
+		{
+			NoRemove ContextMenuHandlers
+			{
+				ForceRemove 'HP FlowCMSyncMenu' = s '{0F4BB248-3603-46A1-AAA1-D0CCC9A5E2BE}'
+			}
+		}
+	}	
+}

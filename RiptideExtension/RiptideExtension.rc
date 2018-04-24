@@ -1,0 +1,182 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#ifndef APSTUDIO_INVOKED
+#include "targetver.h"
+#endif
+#include "winres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (United States) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#ifndef APSTUDIO_INVOKED\r\n"
+    "#include ""targetver.h""\r\n"
+    "#endif\r\n"
+    "#include ""winres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "1 TYPELIB ""RiptideExtension.tlb""\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x2L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904e4"
+        BEGIN
+            VALUE "CompanyName", "iManage LLC"
+            VALUE "FileDescription", "iManage Share Shell Extension"
+            VALUE "FileVersion", "1.0.0.1"
+            VALUE "InternalName", "FlowCMExtension.dll"
+            VALUE "LegalCopyright", "Copyright © 2015 iManage LLC"
+            VALUE "OriginalFilename", "RiptideExtension.dll"
+            VALUE "ProductName", "iManage Share Synchronization Module"
+            VALUE "ProductVersion", "1.0.0.1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1252
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// REGISTRY
+//
+
+IDR_RIPTIDEHANDLER4     REGISTRY                "RiptideHandler4.rgs"
+
+IDR_RIPTIDEHANDLER2     REGISTRY                "RiptideHandler2.rgs"
+
+IDR_RIPTIDECONTEXTMENUIMPL REGISTRY                "RiptideContextMenuImpl.rgs"
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_ICON1               ICON                    "Resource\\selsync.ico"
+
+IDI_ICON2               ICON                    "Resource\\modified.ico"
+
+IDI_ICON3               ICON                    "Resource\\nosync.ico"
+
+IDI_ICON4               ICON                    "Resource\\check.ico"
+
+IDI_ICON5               ICON                    "Resource\\delete.ico"
+
+IDI_ICON6               ICON                    "Resource\\download.ico"
+
+IDI_ICON7               ICON                    "Resource\\preview.ico"
+
+IDI_ICON8               ICON                    "Resource\\securelink.ico"
+
+IDI_LINKSITE_FOLDER     ICON                    "Resource\\Linksite_Folder.ico"
+
+IDI_LINKSITE_SHARED_FOLDER ICON                 "Resource\\Linksite_Shared_Folder.ico"
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_RIPTIDE             BITMAP                  "Resource\\riptide.bmp"
+
+IDB_LINK                BITMAP                  "Resource\\link.bmp"
+
+IDB_VERSIONS            BITMAP                  "Resource\\multiple_revisions.bmp"
+
+IDB_SECURE_LINK         BITMAP                  "Resource\\securelink.bmp"
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE
+BEGIN
+    IDS_PROJNAME            "RiptideExtension"
+    IDS_RIPTIDEROOT         "Files synced with iManage Share"
+    IDS_MSG_TITLE           "iManage Share"
+    IDS_INSTALL_NEEDED      "Please install iManage Share for this operation.\n\n"
+    IDS_FILE_NOT_FOUND      "Unable to locate %s."
+    IDS_PREVIEW             "&Priview"
+    IDS_DOWNLOAD            "&Download"
+    IDS_REMOVE              "&Remove"
+    IDS_BROWSE_ITEM_ON_WEB_TIP 
+                            "View to the selected file/folder on the Website"
+    IDS_GET_PUBLIC_LINK_TIP "Get the published url link for the selected file and copy it to the clipboard"
+    IDS_VIEW_VERSIONS_TIP   "View the previous versions on the Website"
+END
+
+#endif    // English (United States) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+1 TYPELIB "RiptideExtension.tlb"
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
