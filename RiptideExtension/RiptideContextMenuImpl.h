@@ -114,13 +114,6 @@ protected:
     // The function that handles the "Sample" verb
     void OnAction(HWND hWnd, UINT index);
 
-	bool IsLocal(const CString& path);
-private:
-	bool IsGoDriveItem(CString path);
-	_bstr_t WriteFileNames(CAtlArray<CString>& files);
-	bool VerifySyncFolderExist(void);
-	CString GetSyncFolderPath(void);
-
 private:
 	CSimpleArray<CComBSTR> menuItems;
 	CSimpleArray<CComBSTR> menuItemsHelp;

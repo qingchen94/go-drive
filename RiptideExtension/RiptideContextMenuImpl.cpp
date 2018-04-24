@@ -14,7 +14,7 @@
 #include <strsafe.h>
 #include "dllmain.h"
 #include "TransparentBitmap.h"
-
+#include "Helper.h"
 #pragma endregion
 
 #ifdef _UNICODE
@@ -182,12 +182,12 @@ IFACEMETHODIMP CRiptideContextMenuImpl::QueryContextMenu(
 		DeleteObject(hIcon);
 	}
 
-	if (m_selectedFiles.GetCount() == 1 && IsGoDriveItem(m_selectedFiles[0]))
+	if (m_selectedFiles.GetCount() == 1 && CHelper::IsGoDriveItem(m_selectedFiles[0]))
 	{
 		InsertMenu(hMenu, indexMenu, MF_SEPARATOR | MF_BYPOSITION, -1, _T(""));
 		indexMenu++;
 
-		if (IsLocal(m_selectedFiles[0]))
+		if (CHelper::IsLocal(m_selectedFiles[0]))
 		{
 			//Remove
 			InsertMenu(hMenu, indexMenu, MF_STRING | MF_BYPOSITION, (UINT)uID + 2, OLE2T(menuItems[2]));
@@ -422,95 +422,4 @@ IFACEMETHODIMP CRiptideContextMenuImpl::InvokeCommand(LPCMINVOKECOMMANDINFO lpcm
     }
 
     return S_OK;
-}
-
-bool CRiptideContextMenuImpl::IsGoDriveItem(CString sPath)
-{
-	TCHAR temp;
-	bool bRet = false;
-	UNIVERSAL_NAME_INFO * puni = NULL;
-	CString sRet = sPath;
-	DWORD bufsize = 0;
-	//Call WNetGetUniversalName using UNIVERSAL_NAME_INFO_LEVEL option
-	if (WNetGetUniversalName(sPath,
-		UNIVERSAL_NAME_INFO_LEVEL,
-		(LPVOID)&temp,
-		&bufsize) == ERROR_MORE_DATA)
-	{
-		// now we have the size required to hold the UNC path
-		TCHAR * buf = new TCHAR[bufsize + 1];
-		puni = (UNIVERSAL_NAME_INFO *)buf;
-		if (WNetGetUniversalName(sPath,
-			UNIVERSAL_NAME_INFO_LEVEL,
-			(LPVOID)puni,
-			&bufsize) == NO_ERROR)
-		{
-			sRet = puni->lpUniversalName;
-			sRet.MakeLower();
-			if (-1 != sRet.Find(_T("localhost@8880")))
-				bRet = true;
-		}
-		delete[] buf;
-	}
-	return bRet;
-}
-
-_bstr_t CRiptideContextMenuImpl::WriteFileNames(CAtlArray<CString>& files)
-{
-	const BYTE pnByteOrderMark[] = { 0xFF, 0xFE }; 
-	CString fileName = _T("");
-	CAtlTemporaryFile tmpFile;
-	if (S_OK == tmpFile.Create())
-	{
-		fileName =  CString(tmpFile.TempFileName()) + _T("~");
-
-		CString newline = _T("\r\n");
-		for (int i = 0; i < files.GetCount(); i++)
-		{
-			DWORD bytes_written = 0;
-			if ( i == 0)
-				tmpFile.Write(pnByteOrderMark, sizeof(pnByteOrderMark));
-
-			CString file = files[i];
-			ATLVERIFY (tmpFile.Write((LPCTSTR) file, file.GetLength() * sizeof(TCHAR), &bytes_written) == S_OK);
-			ATLVERIFY (tmpFile.Write((LPCTSTR) newline, newline.GetLength() * sizeof(TCHAR)) == S_OK);
-		}
-
-		ATLVERIFY (tmpFile.Close(fileName) == S_OK);
-	}
-	return (LPCTSTR) fileName;
-}
-
-bool CRiptideContextMenuImpl::VerifySyncFolderExist(void)
-{
-	CString strPath = GetSyncFolderPath();
-	
-	if (!strPath.IsEmpty() && PathFileExists(strPath))
-		return true;
-	
-	return false;
-}
-
-CString CRiptideContextMenuImpl::GetSyncFolderPath(void)
-{
-	CString strPath = _T("");
-	CRegKey key;
-	if (ERROR_SUCCESS == key.Open(HKEY_CURRENT_USER, SHARE_SYNC_HIVE, KEY_READ))
-	{
-		TCHAR szPath[MAX_PATH*4];
-		DWORD cbSize;
-		cbSize = sizeof( szPath ) / sizeof( TCHAR );
-		if (ERROR_SUCCESS  == key.QueryStringValue( _T("SyncFolderPath"), szPath, &cbSize ))
-		{
-			if (PathFileExists(szPath))
-				strPath = szPath;
-		}
-	}
-
-	return strPath;
-}
-
-bool CRiptideContextMenuImpl::IsLocal(const CString& path)
-{
-	return false;
 }
