@@ -2,13 +2,13 @@ HKCR
 {
 	NoRemove CLSID
 	{
-		ForceRemove {21D134B6-DC2E-4274-9D0D-7921C3546A62} = s 'RiptideHandler2 Class'
+		ForceRemove {34878F00-1827-4A4B-B4C2-9628D9E39EDE} = s 'RiptideHandler2 Class'
 		{
 			InprocServer32 = s '%MODULE%'
 			{
 				val ThreadingModel = s 'Apartment'
 			}
-			'TypeLib' = s '{07FD1362-1688-4525-96C7-13D3D8DB10FE}'
+			'TypeLib' = s '{006E7D34-3BA6-45CB-AA52-42DD992762F2}'
 		}
 	}
 }
@@ -27,7 +27,7 @@ HKLM
 					{
 						NoRemove ShellIconOverlayIdentifiers
 						{
-							ForceRemove ' FlowCMSync1' = s '{21D134B6-DC2E-4274-9D0D-7921C3546A62}'
+							ForceRemove ' GoDrive1' = s '{34878F00-1827-4A4B-B4C2-9628D9E39EDE}'
 							{
 							}
 						}

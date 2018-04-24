@@ -39,7 +39,11 @@ IFACEMETHODIMP CRiptideHandler4::GetPriority(int* pPriority)
 */
 IFACEMETHODIMP CRiptideHandler4::IsMemberOf(LPCWSTR pwszPath,DWORD dwAttrib)
 {
-	try{
+	try
+	{
+		if (PathIsDirectoryW(pwszPath))
+			return S_FALSE;
+
 		if (CHelper::IsGoDriveItem(pwszPath) && CHelper::IsLocal(pwszPath))
 			return S_OK;
 	}

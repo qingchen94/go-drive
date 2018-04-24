@@ -112,16 +112,16 @@ void CRiptideContextMenuImpl::OnAction(HWND hWnd, UINT idCmd)
 	CString strFilePath;
 	TCHAR NPath[MAX_PATH];
 
-	HMODULE handle = GetModuleHandle(_T("FlowCMExtension.dll"));
+	HMODULE handle = GetModuleHandle(_T("GoDriveShellExtension.dll"));
 	if (handle == nullptr)
 	{
-		AtlTrace("failed to get the module handle of FlowCMExtension.dll !");
+		AtlTrace("failed to get the module handle of GoDriveShellExtension.dll !");
 		return;
 	}
 	// When passing NULL to GetModuleHandle, it returns handle of exe itself
 	if (0 == GetModuleFileName(handle, NPath, MAX_PATH))
 	{
-		AtlTrace("failed to get the module handle of FlowCMExtension.dll !");
+		AtlTrace("failed to get the module handle of GoDriveShellExtension.dll !");
 		return;
 	}
 

@@ -74,12 +74,12 @@ BEGIN
         BLOCK "040904e4"
         BEGIN
             VALUE "CompanyName", "iManage LLC"
-            VALUE "FileDescription", "iManage Share Shell Extension"
+            VALUE "FileDescription", "iManage Go!Drive Shell Extension"
             VALUE "FileVersion", "1.0.0.1"
-            VALUE "InternalName", "FlowCMExtension.dll"
+            VALUE "InternalName", "GoDriveShellExtension.dll"
             VALUE "LegalCopyright", "Copyright © 2015 iManage LLC"
-            VALUE "OriginalFilename", "RiptideExtension.dll"
-            VALUE "ProductName", "iManage Share Synchronization Module"
+            VALUE "OriginalFilename", "GoDriveShellExtension.dll"
+            VALUE "ProductName", "iManage Go!Drive Module"
             VALUE "ProductVersion", "1.0.0.1"
         END
     END

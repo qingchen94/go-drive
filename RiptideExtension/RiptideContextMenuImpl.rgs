@@ -2,7 +2,7 @@ HKCR
 {
 	NoRemove CLSID
 	{
-		ForceRemove {0F4BB248-3603-46A1-AAA1-D0CCC9A5E2BE} = s 'HP FlowCMSyncMenu'
+		ForceRemove {AEC95F8C-E0E8-4EF9-89E3-F26D21EBEC14} = s 'IManage.GoDriveMenu'
 		{
 			InprocServer32 = s '%MODULE%'
 			{
@@ -16,7 +16,7 @@ HKCR
 		{
 			NoRemove ContextMenuHandlers
 			{
-				ForceRemove 'HP FlowCMSyncMenu' = s '{0F4BB248-3603-46A1-AAA1-D0CCC9A5E2BE}'
+				ForceRemove 'IManage.GoDriveMenu' = s '{AEC95F8C-E0E8-4EF9-89E3-F26D21EBEC14}'
 			}
 		}
 	}
@@ -28,7 +28,7 @@ HKCR
 			{
 				NoRemove ContextMenuHandlers
 				{
-					ForceRemove 'HP FlowCMSyncMenu' = s '{0F4BB248-3603-46A1-AAA1-D0CCC9A5E2BE}'
+					ForceRemove 'IManage.GoDriveMenu' = s '{AEC95F8C-E0E8-4EF9-89E3-F26D21EBEC14}'
 				}
 			}
 		}
@@ -36,7 +36,7 @@ HKCR
 		{
 			NoRemove ContextMenuHandlers
 			{
-				ForceRemove 'HP FlowCMSyncMenu' = s '{0F4BB248-3603-46A1-AAA1-D0CCC9A5E2BE}'
+				ForceRemove 'IManage.GoDriveMenu' = s '{AEC95F8C-E0E8-4EF9-89E3-F26D21EBEC14}'
 			}
 		}
 	}	

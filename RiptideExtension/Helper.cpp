@@ -44,5 +44,5 @@ bool CHelper::IsGoDriveItem(const CString& sPath)
 
 bool CHelper::IsLocal(const CString& path)
 {
-	return false;
+	return true;
 }
