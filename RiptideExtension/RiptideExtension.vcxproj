@@ -322,11 +322,25 @@
     <Image Include="..\RiptideExtensionRes\Resource\securelink.ico" />
     <Image Include="..\RiptideExtensionRes\Resource\selsync.ico" />
     <Image Include="Resource\check.ico" />
+    <Image Include="Resource\checkBadge.ico" />
+    <Image Include="Resource\cloudBadge.ico" />
     <Image Include="Resource\delete.ico" />
+    <Image Include="Resource\deleteIcon.ico" />
     <Image Include="Resource\download.ico" />
+    <Image Include="Resource\downloadIcon.ico" />
+    <Image Include="Resource\link.bmp" />
     <Image Include="Resource\link.ico" />
+    <Image Include="Resource\Linksite_Folder.ico" />
+    <Image Include="Resource\Linksite_Shared_Folder.ico" />
+    <Image Include="Resource\multiple_revisions.bmp" />
+    <Image Include="Resource\nosync.ico" />
     <Image Include="Resource\preview.ico" />
+    <Image Include="Resource\previewIcon.ico" />
+    <Image Include="Resource\riptide.bmp" />
     <Image Include="Resource\rootfolder_share.ico" />
+    <Image Include="Resource\securelink.bmp" />
+    <Image Include="Resource\securelink.ico" />
+    <Image Include="Resource\selsync.ico" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="RiptideExtension.rc" />

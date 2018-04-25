@@ -159,6 +159,48 @@
     <Image Include="Resource\preview.ico">
       <Filter>Resource Files</Filter>
     </Image>
+    <Image Include="Resource\selsync.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resource\cloudBadge.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resource\nosync.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resource\securelink.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resource\Linksite_Folder.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resource\Linksite_Shared_Folder.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resource\riptide.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resource\link.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resource\multiple_revisions.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resource\securelink.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resource\checkBadge.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resource\deleteIcon.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resource\downloadIcon.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resource\previewIcon.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="RiptideExtension.rc">
