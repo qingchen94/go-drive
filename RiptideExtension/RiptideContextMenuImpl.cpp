@@ -134,6 +134,13 @@ void CRiptideContextMenuImpl::OnAction(HWND hWnd, UINT idCmd)
 
 	ShellExecute(hWnd, _T("open"), strExe, Ops, NULL, SW_SHOW);
 
+	if (menuItemsData[idCmd] == "-d")
+		CHelper::AddFileToLocal(m_szFileName);
+	else if (menuItemsData[idCmd] == "-r")
+		CHelper::RemoveFileFromLocal(m_szFileName);
+
+	SHChangeNotify(SHCNE_UPDATEITEM, SHCNF_PATH, m_szFileName, NULL);
+
 	return;
 }
 

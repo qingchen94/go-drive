@@ -1,6 +1,7 @@
 #include "stdafx.h"
 #include "Helper.h"
 
+CAtlMap<CString, bool> CHelper::g_localFiles;
 
 CHelper::CHelper()
 {
@@ -34,7 +35,7 @@ bool CHelper::IsGoDriveItem(const CString& sPath)
 		{
 			sRet = puni->lpUniversalName;
 			sRet.MakeLower();
-			if (-1 != sRet.Find(_T("localhost@8880")))
+			if (-1 != sRet.Find(_T("\\davwwwroot\\go!drive")))
 				bRet = true;
 		}
 		delete[] buf;
@@ -44,5 +45,19 @@ bool CHelper::IsGoDriveItem(const CString& sPath)
 
 bool CHelper::IsLocal(const CString& path)
 {
+	bool bRet = false;
+	if (g_localFiles.Lookup(path, bRet))
+		return true;
+
 	return false;
+}
+
+void CHelper::AddFileToLocal(const CString& file)
+{
+	g_localFiles[file] = true;
+}
+
+void CHelper::RemoveFileFromLocal(const CString& file)
+{
+	g_localFiles.RemoveKey(file);
 }

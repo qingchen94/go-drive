@@ -127,7 +127,7 @@ IDI_ICON8               ICON                    "Resource\\securelink.ico"
 
 IDI_LINKSITE_FOLDER     ICON                    "Resource\\Linksite_Folder.ico"
 
-IDI_LINKSITE_SHARED_FOLDER ICON                 "Resource\\Linksite_Shared_Folder.ico"
+IDI_LINKSITE_SHARED_FOLDER ICON                    "Resource\\Linksite_Shared_Folder.ico"
 
 
 /////////////////////////////////////////////////////////////////////////////
@@ -156,7 +156,7 @@ BEGIN
     IDS_MSG_TITLE           "iManage Share"
     IDS_INSTALL_NEEDED      "Please install iManage Share for this operation.\n\n"
     IDS_FILE_NOT_FOUND      "Unable to locate %s."
-    IDS_PREVIEW             "&Priview"
+    IDS_PREVIEW             "&Preview"
     IDS_DOWNLOAD            "&Download"
     IDS_REMOVE              "&Remove"
     IDS_BROWSE_ITEM_ON_WEB_TIP 

@@ -201,6 +201,9 @@
     <Image Include="Resource\previewIcon.ico">
       <Filter>Resource Files</Filter>
     </Image>
+    <Image Include="Resource\modified.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="RiptideExtension.rc">

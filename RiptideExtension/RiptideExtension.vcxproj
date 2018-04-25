@@ -332,6 +332,7 @@
     <Image Include="Resource\link.ico" />
     <Image Include="Resource\Linksite_Folder.ico" />
     <Image Include="Resource\Linksite_Shared_Folder.ico" />
+    <Image Include="Resource\modified.ico" />
     <Image Include="Resource\multiple_revisions.bmp" />
     <Image Include="Resource\nosync.ico" />
     <Image Include="Resource\preview.ico" />
