@@ -156,9 +156,9 @@ BEGIN
     IDS_MSG_TITLE           "iManage Share"
     IDS_INSTALL_NEEDED      "Please install iManage Share for this operation.\n\n"
     IDS_FILE_NOT_FOUND      "Unable to locate %s."
-    IDS_PREVIEW             "&Preview"
-    IDS_DOWNLOAD            "&Download"
-    IDS_REMOVE              "&Remove"
+    IDS_PREVIEW             "&View on iManage Work"
+    IDS_DOWNLOAD            "&Local"
+    IDS_REMOVE              "&Online Only"
     IDS_BROWSE_ITEM_ON_WEB_TIP 
                             "View to the selected file/folder on the Website"
     IDS_GET_PUBLIC_LINK_TIP "Get the published url link for the selected file and copy it to the clipboard"
