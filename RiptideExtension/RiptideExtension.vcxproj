@@ -161,7 +161,7 @@
     </ResourceCompile>
     <Link>
       <RegisterOutput>true</RegisterOutput>
-      <AdditionalDependencies>comsuppw.lib;shlwapi.lib;comctl32.lib;msimg32.lib;Mpr.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>comsuppw.lib;shlwapi.lib;comctl32.lib;msimg32.lib;Mpr.lib;Wininet.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <ShowProgress>LinkVerbose</ShowProgress>
       <ModuleDefinitionFile>.\RiptideExtension.def</ModuleDefinitionFile>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -234,7 +234,7 @@
     </ResourceCompile>
     <Link>
       <RegisterOutput>false</RegisterOutput>
-      <AdditionalDependencies>comsuppw.lib;shlwapi.lib;comctl32.lib;msimg32.lib;Mpr.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>comsuppw.lib;shlwapi.lib;comctl32.lib;msimg32.lib;Mpr.lib;Wininet.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <ModuleDefinitionFile>.\RiptideExtension.def</ModuleDefinitionFile>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <SubSystem>Windows</SubSystem>
