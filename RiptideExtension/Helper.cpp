@@ -1,5 +1,10 @@
 #include "stdafx.h"
 #include "Helper.h"
+#include <Shlwapi.h>
+#include <WinInet.h>
+
+#include "rapidjson/document.h"
+using namespace rapidjson;
 
 CAtlMap<CString, bool> CHelper::g_localFiles;
 
@@ -45,11 +50,85 @@ bool CHelper::IsGoDriveItem(const CString& sPath)
 
 bool CHelper::IsLocal(const CString& path)
 {
-	bool bRet = false;
-	if (g_localFiles.Lookup(path, bRet))
-		return true;
+	//bool bRet = false;
+	//if (g_localFiles.Lookup(path, bRet))
+	//	return true;
+	//else
+	//	return false;
 
-	return false;
+	bool result = false;
+	CString host = _T("localhost");
+	int port = 8010;
+
+	// Escape the path
+	TCHAR pathEscaped[MAX_PATH] = { NULL };
+	DWORD dwSize = sizeof(pathEscaped) / sizeof(TCHAR);
+	HRESULT hr = UrlEscape(path, pathEscaped, &dwSize, URL_ESCAPE_SEGMENT_ONLY);
+	pathEscaped[dwSize] = NULL;
+
+	CString url;
+	if (SUCCEEDED(hr))
+		url.Format(_T("is_local?path=%s"), pathEscaped);
+	else
+		url.Format(_T("is_local?path=%s"), path);
+
+	HINTERNET hIntSession =
+		InternetOpen(_T("Go!Drive"), INTERNET_OPEN_TYPE_DIRECT, NULL, NULL, 0);
+
+	if (hIntSession == NULL)
+		return result;
+
+	HINTERNET hHttpSession =
+		InternetConnect(hIntSession, host, port, 0, 0, INTERNET_SERVICE_HTTP, 0, NULL);
+
+	if (hHttpSession == NULL)
+		return result;
+
+	HINTERNET hHttpRequest = HttpOpenRequest(
+		hHttpSession,
+		_T("PUT"),
+		url,
+		0, 0, 0, INTERNET_FLAG_RELOAD, 0);
+
+	if (hHttpSession == NULL)
+		return result;
+
+	TCHAR* szHeaders = _T("Content-Type: text/*");
+	CHAR szReq[1024] = "";
+	if (!HttpSendRequest(hHttpRequest, szHeaders, _tcslen(szHeaders), szReq, strlen(szReq))) {
+		DWORD dwErr = GetLastError();
+		/// handle error
+	}
+
+	CHAR szBuffer[1025];
+	std::string json = "";
+	DWORD dwRead = 0;
+	while (InternetReadFile(hHttpRequest, szBuffer, sizeof(szBuffer) - 1, &dwRead) && dwRead) {
+		szBuffer[dwRead] = NULL;
+		json += szBuffer;
+		dwRead = 0;
+	}
+
+	//json = "{ \"result\": true }";
+	Document d;
+	d.Parse(json.c_str());
+
+	if (d.IsObject())
+	{
+		if (d.HasMember("result"))
+		{
+			if (d["result"].IsBool())
+			{
+				result = d["result"].GetBool();
+			}
+		}
+	}
+
+	InternetCloseHandle(hHttpRequest);
+	InternetCloseHandle(hHttpSession);
+	InternetCloseHandle(hIntSession);
+
+	return result;
 }
 
 void CHelper::AddFileToLocal(const CString& file)

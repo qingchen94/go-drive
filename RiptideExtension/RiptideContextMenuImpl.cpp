@@ -106,7 +106,7 @@ IFACEMETHODIMP CRiptideContextMenuImpl::Initialize(
 void CRiptideContextMenuImpl::OnAction(HWND hWnd, UINT idCmd)
 {	
 	CString Ops = CString(_T("context_menu ")) +  menuItemsData[idCmd] +
-		_T(" \"") + m_szFileName + _T("\"");
+		_T(" --path=\"") + m_szFileName + _T("\"");
 
 	HINSTANCE hInst = NULL;
 	CString strFilePath;
@@ -134,10 +134,10 @@ void CRiptideContextMenuImpl::OnAction(HWND hWnd, UINT idCmd)
 
 	ShellExecute(hWnd, _T("open"), strExe, Ops, NULL, SW_SHOW);
 
-	if (menuItemsData[idCmd] == "-d")
-		CHelper::AddFileToLocal(m_szFileName);
-	else if (menuItemsData[idCmd] == "-r")
-		CHelper::RemoveFileFromLocal(m_szFileName);
+	//if (menuItemsData[idCmd] == "-d")
+	//	CHelper::AddFileToLocal(m_szFileName);
+	//else if (menuItemsData[idCmd] == "-r")
+	//	CHelper::RemoveFileFromLocal(m_szFileName);
 
 	SHChangeNotify(SHCNE_UPDATEITEM, SHCNF_PATH, m_szFileName, NULL);
 
