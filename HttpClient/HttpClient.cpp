@@ -34,7 +34,7 @@ bool IsLocal(TCHAR* path)
 
 	HINTERNET hHttpRequest = HttpOpenRequest(
 		hHttpSession,
-		_T("PUT"),
+		_T("GET"),
 		url,
 		0, 0, 0, INTERNET_FLAG_RELOAD, 0);
 
