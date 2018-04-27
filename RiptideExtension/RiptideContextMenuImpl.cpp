@@ -127,7 +127,7 @@ void CRiptideContextMenuImpl::OnAction(HWND hWnd, UINT idCmd)
 
 	CString strDllDir = NPath;
 	strDllDir = strDllDir.Left(strDllDir.ReverseFind(_T('\\')));
-	CString strExe = strDllDir + _T("\\") + _T("go_drive.bat");
+	CString strExe = strDllDir + _T("\\") + _T("go_drive.exe.lnk");
 
 	ATLTRACE2(_T("Ops = %s\n"), Ops);
 	ATLTRACE2(_T("go_drive.exe = %s\n"), strDllDir);
