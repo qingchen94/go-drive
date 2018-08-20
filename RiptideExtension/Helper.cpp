@@ -6,6 +6,8 @@
 #include "rapidjson/document.h"
 using namespace rapidjson;
 
+#define GODRIVE_ROOT _T("\\davwwwroot\\imanagedrive")
+
 CAtlMap<CString, bool> CHelper::g_localFiles;
 
 CHelper::CHelper()
@@ -40,7 +42,7 @@ bool CHelper::IsGoDriveItem(const CString& sPath)
 		{
 			sRet = puni->lpUniversalName;
 			sRet.MakeLower();
-			if (-1 != sRet.Find(_T("\\davwwwroot\\go!drive")))
+			if (-1 != sRet.Find(GODRIVE_ROOT))
 				bRet = true;
 		}
 		delete[] buf;
